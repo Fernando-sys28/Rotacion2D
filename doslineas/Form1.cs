@@ -62,10 +62,8 @@ namespace doslineas
         private void button4_Click(object sender, EventArgs e)
 
         {
-            Rectangle screen = Screen.PrimaryScreen.Bounds;
-
-            int Sx = ((screen.Width/2) - canvas.Width);
-            int Sy = ((-50+screen.Height/2)- canvas.Height);
+            int Sx = (canvas.Width / 2)+50;
+            int Sy = (canvas.Height / 2)-50;
             a = new Point(canvas.Width / 2, 0);
             b = new Point(canvas.Width / 2, canvas.Height);
             c = new Point(0, canvas.Height / 2);
@@ -75,10 +73,10 @@ namespace doslineas
 
             int angle;
 
-            a = new Point(0,0);
-            b = new Point(0,100);
-            c = new Point(100, 100);
-            d = new Point(100, 0);
+            a = new Point(-50, 50);
+            b = new Point(50, 50);
+            c = new Point(50, -50);
+            d = new Point(-50, -50);
 
             angle = int.Parse(textBox1.Text);
 
