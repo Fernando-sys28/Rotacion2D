@@ -1,5 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace doslineas
 {
@@ -8,17 +9,12 @@ namespace doslineas
         Graphics g,ct;
         Bitmap bmp,center;
         static Point  a, b, c, d;
-        private bool Boton4 = false;
-
         public Form1()
         {
             InitializeComponent();
             bmp = new Bitmap(canvas.Width, canvas.Height);
             g = Graphics.FromImage(bmp);
-            canvas.Image = bmp;
-
-            center = new Bitmap(Width,Height);
-            ct = Graphics.FromImage(center);
+            canvas.Image = bmp;       
         }
 
         private void BCT_CANVAS_Click(object sender, EventArgs e)
@@ -38,6 +34,9 @@ namespace doslineas
 
         private void button3_Click(object sender, EventArgs e)
         {
+            int Sx = (canvas.Width / 2);
+            int Sy = (canvas.Height / 2);
+
             a = new Point(canvas.Width / 2, 0);
             b = new Point(canvas.Width / 2, canvas.Height);
             c = new Point(0, canvas.Height / 2);
@@ -54,15 +53,19 @@ namespace doslineas
 
             angle = int.Parse(textBox1.Text);
 
-            Render(a, b, angle);
-            Render(b, c, angle);
-            Render(c, d, angle);
-            Render(d, a, angle);
+            Render(a, b, angle, Sx, Sy);
+            Render(b, c, angle, Sx, Sy);
+            Render(c, d, angle, Sx, Sy);
+            Render(d, a, angle, Sx, Sy);
         }
 
         private void button4_Click(object sender, EventArgs e)
+
         {
-            Boton4 = true;
+            Rectangle screen = Screen.PrimaryScreen.Bounds;
+
+            int Sx = ((screen.Width/2) - canvas.Width);
+            int Sy = ((-50+screen.Height/2)- canvas.Height);
             a = new Point(canvas.Width / 2, 0);
             b = new Point(canvas.Width / 2, canvas.Height);
             c = new Point(0, canvas.Height / 2);
@@ -79,10 +82,10 @@ namespace doslineas
 
             angle = int.Parse(textBox1.Text);
 
-            Render(a, b, angle);
-            Render(b, c, angle);
-            Render(c, d, angle);
-            Render(d, a, angle);
+            Render(a, b, angle, Sx, Sy);
+            Render(b, c, angle, Sx, Sy);
+            Render(c, d, angle, Sx, Sy);
+            Render(d, a, angle, Sx, Sy);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -117,19 +120,9 @@ namespace doslineas
         }
 
 
-        private void Render(Point a, Point b, int angle)
+        private void Render(Point a, Point b, int angle, int Sx, int Sy)
         {
             PointF a2, b2;
-            int Sx, Sy;
-
-            if (Boton4 == true)
-            {
-                Sx = (Screen.PrimaryScreen.WorkingArea.Width / 2) - (canvas.Width);
-                Sy = (Screen.PrimaryScreen.WorkingArea.Height / 2 ) - (canvas.Height);
-
-            }else
-                Sx = (canvas.Width/2);
-                Sy = (canvas.Height/2);
 
             a2 = new PointF(Sx + a.X, Sy - a.Y);
             b2 = new PointF(Sx + b.X, Sy - b.Y);
@@ -148,6 +141,8 @@ namespace doslineas
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int Sx = (canvas.Width / 2);
+            int Sy = (canvas.Height / 2);
 
             a = new Point(canvas.Width / 2, 0);
             b = new Point(canvas.Width / 2, canvas.Height);
@@ -165,10 +160,10 @@ namespace doslineas
 
             angle = int.Parse(textBox1.Text);
 
-            Render(a, b, angle);
-            Render(b, c, angle);
-            Render(c, d, angle);
-            Render(d, a, angle);
+            Render(a, b, angle, Sx, Sy);
+            Render(b, c, angle, Sx, Sy);
+            Render(c, d, angle, Sx, Sy);
+            Render(d, a, angle, Sx, Sy);
 
             
         }
