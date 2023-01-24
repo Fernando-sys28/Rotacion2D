@@ -42,16 +42,16 @@
             // canvas
             // 
             this.canvas.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.canvas.Location = new System.Drawing.Point(107, 63);
+            this.canvas.Location = new System.Drawing.Point(115, 104);
             this.canvas.Name = "canvas";
-            this.canvas.Size = new System.Drawing.Size(700, 432);
+            this.canvas.Size = new System.Drawing.Size(758, 472);
             this.canvas.TabIndex = 0;
             this.canvas.TabStop = false;
             this.canvas.Click += new System.EventHandler(this.BCT_CANVAS_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(41, 16);
+            this.button1.Location = new System.Drawing.Point(760, 584);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 38);
             this.button1.TabIndex = 1;
@@ -61,14 +61,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(313, 23);
+            this.textBox1.Location = new System.Drawing.Point(172, 28);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 31);
             this.textBox1.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(469, 23);
+            this.button2.Location = new System.Drawing.Point(386, 25);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 34);
             this.button2.TabIndex = 3;
@@ -79,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 23);
+            this.label1.Location = new System.Drawing.Point(104, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 25);
             this.label1.TabIndex = 4;
@@ -89,30 +89,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(832, 147);
+            this.label2.Location = new System.Drawing.Point(365, 591);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.Size = new System.Drawing.Size(267, 25);
             this.label2.TabIndex = 5;
-            this.label2.Text = "171707";
+            this.label2.Text = "Fernando Rivera Castillo 171707";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(594, 23);
+            this.button3.Location = new System.Drawing.Point(522, 25);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 34);
+            this.button3.Size = new System.Drawing.Size(171, 34);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Centro figura";
+            this.button3.Text = "Centroide";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(792, 23);
+            this.button4.Location = new System.Drawing.Point(710, 26);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 34);
+            this.button4.Size = new System.Drawing.Size(163, 34);
             this.button4.TabIndex = 7;
-            this.button4.Text = "CPantalla";
+            this.button4.Text = "CPrimerCuadrante";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 524);
+            this.ClientSize = new System.Drawing.Size(966, 641);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
